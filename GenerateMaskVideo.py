@@ -67,7 +67,7 @@ def VideoGeneration(idir, tandem_windows_size):
             # next frame
             has_next, i_frame = video.read()
 
-        cv2.imwrite(idir + os.sep() + "background.jpg", back_frame)
+        cv2.imwrite(idir + os.sep + "background.jpg", back_frame)
         # endregion ------
 
         # region ----- 3. Video Create -----
@@ -84,7 +84,7 @@ def VideoGeneration(idir, tandem_windows_size):
             y = int(location.yBody[num])
 
             #cv2.circle(frame, (x,y), 2, color=(0,0,255), thickness=-1)
-            bg = cv2.imread(idir + os.sep() + "background.jpg")
+            bg = cv2.imread(idir + os.sep + "background.jpg")
             cv2.rectangle(bg, (x-tandem_windows_size+1,y-tandem_windows_size+1), (x+tandem_windows_size-1, y+tandem_windows_size-1), (0,0,0), -1, cv2.LINE_4)
 
             cv2.rectangle(frame, (1,1), (x-tandem_windows_size, int(height)), (0,0,0), -1, cv2.LINE_4)
