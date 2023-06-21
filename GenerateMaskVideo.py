@@ -73,7 +73,8 @@ def VideoGeneration(idir, tandem_windows_size):
         # region ----- 3. Video Create -----
         print("Video generation")
         fourcc = cv2.VideoWriter_fourcc('m','p','4', 'v')
-        writer = cv2.VideoWriter(v.replace('.mp4', '_extract.mp4'), fourcc, fps, (int(width), int(height)))
+        new_v = v.replace(idir, idir+os.sep+"output")
+        writer = cv2.VideoWriter(new_v.replace('.mp4', '_extract.mp4'), fourcc, fps, (int(width), int(height)))
         video.set(cv2.CAP_PROP_POS_FRAMES, 0) 
 
         video = cv2.VideoCapture(v)
