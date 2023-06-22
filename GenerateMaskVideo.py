@@ -73,7 +73,7 @@ def VideoGeneration(idir, tandem_windows_size):
         # region ----- 3. Video Create -----
         print("Video generation")
         fourcc = cv2.VideoWriter_fourcc('m','p','4', 'v')
-        new_v = v.replace(idir, idir+os.sep+"output")
+        new_v = v.replace(idir, idir+os.sep+"output"+os.sep)
         writer = cv2.VideoWriter(new_v.replace('.mp4', '_extract.mp4'), fourcc, fps, (int(width), int(height)))
         video.set(cv2.CAP_PROP_POS_FRAMES, 0) 
 
@@ -105,6 +105,7 @@ def VideoGeneration(idir, tandem_windows_size):
         cv2.destroyAllWindows()
         writer.release()
     cv2.destroyAllWindows()
+    return("Done")
 
 def gui():
     sg.theme('Dark')
@@ -151,8 +152,7 @@ def gui():
 
                 print("input dir: "+str(in_dir))
                 message = VideoGeneration(in_dir, tandem_windows_size)
-                if message is not None:
-                    sg.popup(message)            
+                sg.popup(message)            
     window.close()
 
 
