@@ -5,13 +5,11 @@
 
 ## Description
 
-GenerateMaskVideo.py is a Python script that enables you to create a video focused exclusively on a running tandem pair by masking out irrelevant regions. It takes the results from [FastTrack](https://www.fasttrack.sh/docs/interactiveTracking/), as input. The resulting video can then be analyzed using [UMATracker](https://ymnk13.github.io/UMATracker/). For a comprehensive overview, refer to the original paper (link will be inserted here).
+GenerateMaskVideo.py is a Python script that creates a video focused exclusively on a specific tandem running pair by masking out irrelevant regions. It takes the results from [FastTrack](https://www.fasttrack.sh/docs/interactiveTracking/) as input. The resulting video can then be analyzed using [UMATracker](https://ymnk13.github.io/UMATracker/). Refer to the original paper for details (link will be inserted here).
 
 ## Requirements
-
-Ensure you have the following Python modules installed:
 ```bash
-pip install opencv-python-headless pandas numpy PySimpleGUI tqdm
+pip install opencv-python pandas numpy PySimpleGUI tqdm
 ```
 
 ## Usage
