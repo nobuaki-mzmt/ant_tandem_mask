@@ -30,7 +30,7 @@ python GenerateMaskVideo.py
 Note: It will also ask for the “Tandem window size,” which is 20 pixels by default. This parameter specifies a square region around the tandem pair coordinates that is not masked by the background image.
 
 ## Lisence
-This project is licensed under the BSD 3-Clause License. See the ![LICENSE](License) file for details.
+This project is licensed under the BSD 3-Clause License. See the [LICENSE](License) file for details.
 
 ## Contact
 Nobuaki Mizumoto, Okinawa Institute of Science and Technology  
